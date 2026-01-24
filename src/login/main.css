@@ -1,0 +1,373 @@
+/* =========================
+   BASE
+========================= */
+body.kcBodyClass {
+    font-family: "Red Hat Display", sans-serif !important;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+/* Overlay SVG background */
+body.kcBodyClass::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/assets/wattnet-background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(100px);
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* =========================
+   LOGO
+========================= */
+.kc-logo-wrapper {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.kc-logo {
+    width: 420px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   FORM CARD (GLASS EFFECT)
+========================= */
+.kcFormCardClass {
+    background: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 in Tailwind */
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+}
+
+.kcFormHeaderClass {
+    margin-bottom: 0 !important;
+}
+
+/* =========================
+   INFO AREA
+========================= */
+.kcInfoAreaWrapperClass {
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    backdrop-filter: none !important;
+    font-size: 0.85rem !important;
+}
+
+/* =========================
+   LABELS
+========================= */
+.kcLabelClass,
+.kc-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #9ca3af;
+    margin-bottom: 0.25rem;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.kcInputClass,
+.kcFormGroupClass input[type="text"],
+.kcFormGroupClass input[type="email"] {
+    width: 100%;
+    height: 2.75rem;
+    padding: 0 0.875rem;
+    background: rgba(15, 23, 42, 0.6); /* #0f172a / 60% */
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.5rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 0.95rem;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.kcInputClass::placeholder {
+    color: #9ca3af;
+}
+
+.kcInputClass:focus {
+    outline: none;
+    background: rgba(15, 23, 42, 0.75);
+    border-color: #7bb320;
+}
+
+.kcInputClass:focus,
+.kcFormGroupClass input[type="text"]:focus,
+.kcFormGroupClass input[type="email"]:focus {
+    background: rgba(15, 23, 42, 0.75); /* match password darken effect */
+    outline: none;
+    box-shadow: none;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+/* =========================
+   PASSWORD INPUT GROUP
+========================= */
+.kcInputGroup {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.75rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.kcInputGroup:focus-within {
+    background: rgba(15, 23, 42, 0.75) !important;
+}
+
+.kcInputGroup input {
+    all: unset; /* reset internal input styles */
+    flex: 1;
+    height: 100%;
+    line-height: 2.75rem;
+    padding: 0 0.875rem;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 0.95rem;
+    color: #e5e7eb;
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.kcInputGroup input[type="text"] {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    all: unset; /* remove default styling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 0.75rem;
+    color: #e5e7eb !important; /* icon color */
+    background: rgba(15, 23, 42, 0.6) !important;
+    cursor: pointer;
+}
+
+.kcFormPasswordVisibilityButtonClass:hover {
+    color: #ffffff;
+}
+
+.kcFormPasswordVisibilityButtonClass:focus,
+.kcFormPasswordVisibilityButtonClass:focus-visible,
+.kcFormPasswordVisibilityButtonClass:active {
+    outline: none !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.kcFormPasswordVisibilityButtonClass::before,
+.kcFormPasswordVisibilityButtonClass::after {
+    display: none !important;
+}
+
+/* =========================
+   MAIN SUBMIT BUTTON
+========================= */
+.kcButtonClass,
+button[type="submit"] {
+    background: #c1e859 !important;
+    color: #020617 !important;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.kcButtonClass:hover {
+    background: #8fd22a !important;
+}
+
+.kcButtonClass:active {
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================
+   SOCIAL LOGIN BUTTONS
+========================= */
+.kcFormSocialAccountSectionClass {
+    margin-top: 1.5rem;
+}
+
+.kcFormSocialAccountSectionClass hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25); /* subtle line */
+    margin: 1.25rem 0;
+}
+
+.kcFormSocialAccountListClass {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.kcFormSocialAccountListButtonClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+
+    background: rgba(15, 23, 42, 0.6) !important;
+    color: #e5e7eb !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0.5rem;
+
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.kcFormSocialAccountListClass::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    margin-top: 0.5rem;
+}
+
+.kcFormSocialAccountListButtonClass:hover {
+    background: rgba(15, 23, 42, 0.75);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.kcFormSocialAccountListButtonClass i,
+.kcFormSocialAccountListButtonClass svg {
+    width: 30px;
+    height: 30px;
+    color: #9ca3af;
+}
+
+.kcFormSocialAccountListButtonClass:hover i,
+.kcFormSocialAccountListButtonClass:hover svg {
+    color: #3a78e0 !important;
+}
+
+.kcFormSocialAccountListButtonClass::before,
+.kcFormSocialAccountListButtonClass::after {
+    display: none !important;
+}
+
+.kcFormSocialAccountListClass + hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25); /* same as top line */
+    margin: 1.25rem 0;
+}
+
+/* =========================
+   SECONDARY LINKS
+========================= */
+a,
+.kcLinkClass {
+    color: #3a78e0 !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover,
+.kcLinkClass:hover {
+    text-decoration: underline;
+    color: #3a78e0 !important;
+}
+
+/* =========================
+   ERROR MESSAGES
+========================= */
+.kcInputErrorMessageClass,
+.kcFormHelperTextClass {
+    color: #f87171 !important;
+    font-size: 0.85rem !important;
+}
+
+/* =========================
+   CUSTOM FOOTER
+========================= */
+.kc-form-footer {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
+
+.kc-footer-funding {
+    text-align: justify;
+    margin-bottom: 0.75rem;
+}
+
+.kc-footer-funding p {
+    margin: 0.25rem 0;
+}
+
+/* Logos aligned to left and right */
+.kc-footer-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.kc-footer-logo:first-child {
+    max-height: 35px;
+    display: block;
+}
+
+.kc-footer-logo:last-child {
+    max-height: 25px;
+    display: block;
+}
+
+.kc-footer-copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+}

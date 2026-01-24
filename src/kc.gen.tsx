@@ -7,6 +7,8 @@
 
 // noinspection JSUnusedGlobalSymbols
 
+import "./KcApp.css";
+
 import { lazy, Suspense, type ReactNode } from "react";
 
 export type ThemeName = "keycloakify-starter";

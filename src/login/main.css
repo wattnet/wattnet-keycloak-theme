@@ -24,6 +24,10 @@ body.kcBodyClass::before {
     pointer-events: none;
 }
 
+.kcLoginClass {
+    padding-bottom: 4rem !important;
+}
+
 /* =========================
    LOGO
 ========================= */
@@ -54,7 +58,6 @@ body.kcBodyClass::before {
     flex-direction: column;
     gap: 1rem;
     border: none;
-    margin-bottom: 2rem !important;
 }
 
 .kcFormHeaderClass {

@@ -9,8 +9,8 @@ import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
 
 import wattnetLogo from "../login/assets/wattnet-logo-full-dark-transparent.svg";
-import europeanUnionLogo from "../login/assets/EN_FundedbytheEU_RGB_POS.png";
-import greenDigitLogo from "../login/assets/GreenDIGIT logo color horizontal2.png";
+import europeanUnionLogo from "../login/assets/eu.png";
+import greenDigitLogo from "../login/assets/greendigit.png";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {

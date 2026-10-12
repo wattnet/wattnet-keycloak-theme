@@ -11,6 +11,7 @@ import type { KcContext } from "./KcContext";
 import wattnetLogo from "../login/assets/wattnet-logo-full-dark-transparent.svg";
 import europeanUnionLogo from "../login/assets/eu.png";
 import greenDigitLogo from "../login/assets/greendigit.png";
+import swissFlag from "../login/assets/Flag_of_Switzerland.svg";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -187,13 +188,21 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     <div className="kc-form-footer">
                         <div className="kc-footer-funding">
                             <p>
-                                This work is funded from the European Union’s Horizon Europe research and innovation programme through the GreenDIGIT
-                                project, under the grant agreement No.101131207.
+                                This work was developed within the GreenDIGIT project, funded by the European Union’s Horizon Europe
+                                research and innovation programme under grant agreement No. 101131207, and by the Swiss State
+                                Secretariat for Education, Research and Innovation (SERI).
                             </p>
 
                             <div className="kc-footer-logos">
-                                <img src={europeanUnionLogo} alt="European Union Logo" className="kc-footer-logo" />
-                                <img src={greenDigitLogo} alt="GreenDIGIT Logo" className="kc-footer-logo" />
+                                <div className="kc-footer-logos-left">
+                                    <img src={europeanUnionLogo} alt="European Union Logo" className="kc-footer-logo kc-footer-logo-eu" />
+                                    <img
+                                        src={swissFlag}
+                                        alt="Swiss State Secretariat for Education, Research and Innovation (SERI)"
+                                        className="kc-footer-logo kc-footer-logo-seri"
+                                    />
+                                </div>
+                                <img src={greenDigitLogo} alt="GreenDIGIT Logo" className="kc-footer-logo kc-footer-logo-greendigit" />
                             </div>
                         </div>
 

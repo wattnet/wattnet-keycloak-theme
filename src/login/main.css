@@ -363,14 +363,26 @@ a:hover,
     margin-top: 0.75rem;
 }
 
-.kc-footer-logo:first-child {
-    max-height: 35px;
+.kc-footer-logos-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.kc-footer-logo {
     display: block;
 }
 
-.kc-footer-logo:last-child {
+.kc-footer-logo-eu {
+    max-height: 35px;
+}
+
+.kc-footer-logo-seri {
+    max-height: 24px;
+}
+
+.kc-footer-logo-greendigit {
     max-height: 25px;
-    display: block;
 }
 
 .kc-footer-copyright {
